@@ -1,0 +1,98 @@
+---
+title: "exercise answers"
+author: "ACCE Research Data and Project Management"
+date: "01-02 May 2018, TUoS"
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+<br>
+
+## load packages
+
+```{r, message=F}
+#install.packages("tidyr", "dplyr")
+
+library(tidyr)
+library(dplyr)
+
+```
+
+- #### get data and load from **OSF project** <https://osf.io/kc4mf/>
+
+---
+
+## Example data 1
+
+
+```{r , echo = 2:3}
+birds <- read.csv(here::here("data/birds.csv"))
+head(birds, 20)
+
+```
+
+
+
+---
+
+```{r}
+tidy.birds <- gather(data = birds, key = sex, value = length, male:female)
+head(tidy.birds, 20)
+```
+
+
+---
+
+## Example data 2
+
+
+```{r}
+trees <- read.csv(here::here("data/trees.csv"))
+head(trees, 20)
+
+```
+
+
+
+---
+
+```{r}
+tidy.trees <- separate(data = trees, col = spl, into = c("tree_id", "elevation"), 
+                       sep = "/")
+head(tidy.trees, 20)
+```
+
+---
+
+## Example data 3 
+
+
+```{r , echo = 2:3}
+stocks <- read.csv(here::here("data/stocks.csv"))
+head(stocks, 15)
+
+```
+
+---
+
+```{r}
+stocks %>% 
+  gather(key = stock, value = trend, -date) %>% 
+  separate(col = date, into = c( "month", "day","year"), sep = "-") %>%  
+  head(15)
+```
+
+
+---
+
