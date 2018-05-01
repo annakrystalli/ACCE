@@ -545,6 +545,23 @@ rel_pop_get &lt;- function(df, base_year) {
 </ul>
 <hr />
 </div>
+<div id="solution" class="section level2">
+<h2>solution</h2>
+<pre class="r"><code>#' Calculate population percentage change from baseline
+#'
+#' Calculate population percentage change from baseline from relative population
+#' @param gapminder_df dataframe of gapminder data. Must contain pop_rel column.
+#'
+#' @return gapminder_df with population percentage change from baseline appended 
+#' as column pop_perc
+#' @export
+#' 
+pop_perc_get &lt;- function(gapminder_df){
+    gapminder_df$pop_perc &lt;- (gapminder_df$pop_rel - 1) * 100
+    gapminder_df
+}</code></pre>
+<hr />
+</div>
 <div id="add-description-file" class="section level2">
 <h2>Add <a href="http://r-pkgs.had.co.nz/description.html"><code>DESCRIPTION</code></a> file</h2>
 <p>The job of the DESCRIPTION file is to store important metadata about our analysis package.</p>
