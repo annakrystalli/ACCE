@@ -471,7 +471,7 @@ gapmider_rel_pop &lt;- function(gapminder_df, base_year = 1952) {
     # group by country and calculate population relative to baseline year
     gapminder_df %&gt;%
         dplyr::filter(year &gt;= base_year) %&gt;% 
-        dplyr::group_by(country) %&gt;% dplyr::do(rel_pop_get(.)) %&gt;%
+        dplyr::group_by(country) %&gt;% dplyr::do(rel_pop_get(.), base_year) %&gt;%
         dplyr::ungroup()
 }</code></pre>
 <hr />
@@ -517,14 +517,14 @@ gapmider_rel_pop &lt;- function(gapminder_df, base_year = 1952) {
     # group by country and calculate population relative to baseline year
     gapminder_df %&gt;%
         dplyr::filter(year &gt;= base_year) %&gt;% 
-        dplyr::group_by(country) %&gt;% dplyr::do(rel_pop_get(.)) %&gt;%
+        dplyr::group_by(country) %&gt;% dplyr::do(rel_pop_get(.), base_year) %&gt;%
         dplyr::ungroup()
 }</code></pre>
 <hr />
 <p>I’m not exporting this function so full documentation is not necessary</p>
 <pre class="r"><code># calculate population relative to a baseline year from gapminder single country 
 # subset
-rel_pop_get &lt;- function(df) {
+rel_pop_get &lt;- function(df, base_year) {
     df$pop_rel &lt;- df$pop/df$pop[df$year == base_year]
     df
 }</code></pre>
