@@ -4,6 +4,7 @@ author: "ACCE Research Data and Project Management"
 date: "01-02 May 2018, TUoS"
 output: 
   xaringan::moon_reader:
+    css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
     nature:
       beforeInit: "https://platform.twitter.com/widgets.js"
@@ -13,7 +14,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
+    theme: flatly
     highlight: textmate
 ---
 
@@ -126,7 +127,7 @@ http://mozillascience.github.io/checklist/
 
 ---
 
-### Identifying the right metadata standard
+## Identifying the right metadata standard
 
 > Not an easy task
 
@@ -148,7 +149,7 @@ My suggestion to you: **Ecological Metadata Language**
 
 ---
 
-### [**Ecological Metadata Language (EML)**](http://www.dcc.ac.uk/resources/metadata-standards/eml-ecological-metadata-language) 
+## [**Ecological Metadata Language (EML)**](http://www.dcc.ac.uk/resources/metadata-standards/eml-ecological-metadata-language) 
 #### a metadata standard developed by and for the ecology discipline. 
 
 EML is a [set of XML schema documents and controlled vocabularies](https://knb.ecoinformatics.org/#external//emlparser/docs/eml-2.1.1/index.html) that allow for the **structural expression of metadata**.
@@ -163,7 +164,7 @@ EML is a [set of XML schema documents and controlled vocabularies](https://knb.e
 
 ---
 
-## EML
+### EML
 
     - eml
       - dataset
@@ -187,7 +188,8 @@ EML is a [set of XML schema documents and controlled vocabularies](https://knb.e
           - attributeList
 ---
 
-## **Organising data and metadata: the bare minimum**
+# Documenting metadata:
+## the bare minimum
 
 ### document `coverage` information
 
@@ -213,7 +215,7 @@ Keep a dynamic document used to **plan**, **record** and **write up** methods.
 **Any additional information other users would need to combine your data with theirs? Record it**
 ---
 
-## variable `attribute` table.
+## the variable `attribute` table.
 
 ### Maintain a metadata table of attributes for the variables in your data.
 
@@ -246,7 +248,7 @@ create_meta_shell(mtcars)
 
 ---
 
-## **`attributes` columns**
+### **`attributes` columns**
 
 I use recognized column headers shown here to make it easier to create an EML object down the line. I focus on the core columns required but you can add additional ones for your own purposes.
 
@@ -286,7 +288,9 @@ names(create_meta_shell(mtcars))
 # Example attribute table structure
 
 ## Start a new project to work in.
+
 - Call it `gapminderRR`
+
 - We will carry on in this project for the rest of the course
 
 <img src="../assets/gapminderRR.png" height="200px">
@@ -297,6 +301,7 @@ names(create_meta_shell(mtcars))
 ## Setup the `data/` folder
 
 - Create a **`data/`** folder
+
 - Within the **`data/`** folder create:
     + a **`raw/`** folder
     + a **`clean/`** folder

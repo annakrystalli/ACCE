@@ -1,8 +1,13 @@
 ---
-title: "setup"
-author: "Anna Krystalli"
-date: "4/18/2018"
-output: html_document
+title: "Software Setup"
+author: "ACCE Research Data and Project Management"
+date: "01-02 May 2018, TUoS"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: textmate
 ---
 
 ## Software Requirements

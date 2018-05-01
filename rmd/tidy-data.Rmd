@@ -3,18 +3,19 @@ title: "Tidy data"
 author: "ACCE Research Data and Project Management"
 date: "01-02 May 2018, TUoS"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: cosmo
-    highlight: textmate
   xaringan::moon_reader:
+    css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
     nature:
       beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: textmate
 ---
 
 <img src="../assets/tidy_data.png" height="500">
@@ -86,6 +87,7 @@ library(dplyr)
 ---
 
 ## 1 - wide data
+
 ### one variable over many columns
 
 In this experiment three (rather unusually named) people were given two different drugs (a and b) and their heart rate was recorded:
@@ -104,9 +106,8 @@ messy
 
 
 **How many variables have we got?**
-
-
 **A sensible model we might want to fit:**
+
 
 ```heart rate ~ drug```
 
@@ -114,7 +115,7 @@ messy
 How can we supply the data to a modelling function? (e.g. ```lm()```)
 
 
-----
+---
 
 ## 1 - wide data
 
@@ -194,7 +195,7 @@ tidy
 ```
 
 
-<br>
+---
 
 ## 3 - Combination of messy data
 
@@ -216,7 +217,7 @@ messy <- data.frame(
 messy
 ```
 
-
+---
 
 ## 3 - Combination of messy data
 
@@ -227,6 +228,9 @@ First we first use ```gather()``` to turn columns ```work.T1```, ```home.T1```, 
 tidier <- gather(data = messy, key = key, value = time, -id, -trt)
 tidier
 ```
+
+
+---
 
 ## 3 - Combination of messy data
 

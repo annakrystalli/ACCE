@@ -4,6 +4,7 @@ author: "ACCE Research Data and Project Management"
 date: "01-02 May 2018, TUoS"
 output: 
   xaringan::moon_reader:
+    css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
     nature:
       beforeInit: "https://platform.twitter.com/widgets.js"
@@ -13,13 +14,13 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
+    theme: flatly
     highlight: textmate
 
 ---
 
 
-# **Project Organisation**
+# Project Organisation
 
 Good project layout helps ensure the
 
@@ -145,7 +146,7 @@ Proposal for a reproducible research compendium:
 
 ---
 
-# **R package file system structure for reproducible research**
+# R package file system structure for reproducible research
 
 ### - Take advantage of the power of convention.
 
@@ -200,7 +201,7 @@ install.packages(c("devtools", "usethis"))
 
 ---
 
-# **Applying conventions to our project**
+# Applying conventions to our project
 
 ## Functions in the **`R/`** dir
 
@@ -226,6 +227,8 @@ usethis::use_r("gapminder_process")
 │   └── raw
 │       └── gapminder.csv
 └── gapminderRR.Rproj
+└── scripts
+    └── helper01_create-metadata.R
 ```
 
 
@@ -642,4 +645,4 @@ If this confused you too much:
 
 2. Check out this excellent blogpost by Rich Fitzjohn on [**Designing projects**](https://nicercode.github.io/blog/2013-04-05-projects/) that is a simple version of what we just tried to do (minus the package functionality).
 
-
+<img src="../assets/file-struc.png" height="150px">

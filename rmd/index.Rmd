@@ -1,18 +1,13 @@
 ---
 title: "Course Home"
+author: "ACCE Research Data and Project Management"
+date: "01-02 May 2018, TUoS"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
+    theme: flatly
     highlight: textmate
-  xaringan::moon_reader:
-    css: ["default", "assets/css/little_ak.css", "assets/css/little_ak-fonts.css"]
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
 ---
 
 
@@ -22,7 +17,7 @@ In order to ensure robustness of outputs and maximise the benefits of ACCE resea
 
 The workshop is designed to be relevant to students with a wide range of backgrounds, working with anything from relatively small sets of data collected from field or experimental observations, to those taking a more computational approach and harnessing the power of big data. It also builds on the Quantitative Skills Workshop by focusing on data and project management through R and Rstudio. The course will introduce students to best practice in research project management and equip them with modern tools and techniques for managing their computational workflows to their full potential.
 
-By the end of the workshop, participants will be able to:
+### By the end of the workshop, participants will be able to:
 
 Understand the basics of good research data management and be able to produce tidy, clean datasets with appropriate metadata.
 Manage their computational projects for reproducibility, reuse and collaboration.
@@ -31,20 +26,35 @@ Use modern tools to document code, analyses and data and produce reproducible re
 Be able to publish, share materials and collaborate through the web.
 Understand why this all matters!
 
-## Schedule
+***
+
+[Software Setup Instructions](http://annakrystalli.me/ACCE/setup)
+
+***
+
+## **Schedule**
 
 ### Tue May 1st
 
-- [Introduction](introduction)
-- [Basic Data Hygiene]()
-- [Tidy Data]()
+- [Introduction](http://annakrystalli.me/ACCE/introduction.html)
+- [Basic Data Hygiene](http://annakrystalli.me/ACCE/RDM_intro.html)
+- [Tidy Data](http://annakrystalli.me/ACCE/tidy-data.html)
 
-- [Good Filenaming]()
-- [Metadata]()
+- [Good Filenaming](http://annakrystalli.me/ACCE/filenaming.html)
+- [Metadata & Data Documentation](http://annakrystalli.me/ACCE/metadata.html)
 
-- [Project Management]()
+- [Project Management](http://annakrystalli.me/ACCE/project_man.html)
 
 ### Wed May 2nd
 
 - [Literate Programming]()
-- []
+
+- [Version Control through Git]()
+
+- [Collaborative through GitHub]()
+
+- [Bringing it all together]()
+
+
+
+

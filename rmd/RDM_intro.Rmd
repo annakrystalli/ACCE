@@ -6,9 +6,10 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
+    theme: flatly
     highlight: textmate
   xaringan::moon_reader:
+    css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
     nature:
       beforeInit: "https://platform.twitter.com/widgets.js"
