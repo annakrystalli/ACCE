@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+rmd/*html
+rmd/libs
+data
+*DS_Store
+render.R
+presentations
