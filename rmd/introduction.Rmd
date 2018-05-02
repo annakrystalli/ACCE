@@ -20,7 +20,7 @@ output:
 
 # Welcome
 
-## Course Outline
+## Course Outline <http://annakrystalli.me/ACCE/>
 
 ### Today
 

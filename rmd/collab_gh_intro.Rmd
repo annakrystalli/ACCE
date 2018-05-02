@@ -1,31 +1,27 @@
 ---
 title: "Collaborative `Github` in `Rstudio`"
-author: "NHM STARS, London, Thu 18 May 201"
-subtitle: Anna Krystalli
-output:
-  html_document:
-    fig_width: 7
-    theme: journal
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-  nature: default
+author: "ACCE Research Data and Project Management"
+date: "01-02 May 2018, TUoS"
+output: 
   xaringan::moon_reader:
+    css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
     nature:
-      countIncrementalSlides: no
-      highlightLines: yes
+      beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: textmate
 ---
 
-<br>
-
-***handout:*** [**https://nhm-stars.github.io/materials/day04/collab_gh_intro.html**](https://nhm-stars.github.io/materials/day04/collab_gh_intro.html)
-
-<br>
-
-***
----
+```{r, echo=FALSE, message=FALSE}
+library(dplyr)
+library(magick)
+```
  
 # Session Roadmap
 
@@ -34,23 +30,12 @@ output:
 ### 1 Introductions 
 
 
-#### - **get to know github** (25 mins)
+#### - **get to know github** 
 
   - github as a computational research tool
 
-<br>
-
----
 
 ### 2 Get stuck in
-
-
-#### - [Version control with github and rstudio](https://github.com/annakrystalli/ISBE_Symposium-1) (30 mins)
-
-
-  - In this session, we are going to get you started with using version control from within RStudio.
-
-  - The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.
 
 
 #### - [Collaborative github through rstudio](https://nhm-stars.github.io/materials/day04/evolottery.html) #EvoLottery (40 mins)
@@ -59,55 +44,15 @@ output:
   - We'll use github to collate all species files and plot them all up together at the end! We'll also **discover the skull and beak shapes** associated with each simulated species size.
 
 
-<br>
-<br>
-
----
-class: inverse, center, middle
-
-### introductions: **get to know github** 
-
-***
 ---
 
-<br>
 
-# Version Control
+# GitHub 
 
-## **version control examples**
-
-- Numbering of book editions
-- Wikipedia's Page history
-
-- Your thesis!
-    + mythesis_draft.docx
-    + mythesis_final.docx
-    + mythesis_final_from_supervisor.docx
-    + mythesis_final_from_supervisor_corrected.docx
-    + etc. *ad infinitum*
-
-<br>
----
-
-## **version control and computing**
-
-> \"*The need for a logical way to organize and control revisions has existed for almost as long as writing has existed, but revision control became much more important, and complicated, when the era of computing began.*\"
-
-<br>
----
 
 ## **version control technologies**
 
 ### **GitHub**
-
-- #### Relies on the open-source **version control system Git** 
-    + originally designed by Linus Torvalds for the development of the Linux kernel
-    + now developed and maintained by the Git community
-    
-- #### Much more effcient workflow:
-    + revisions are associated with a timestamp person making the change.
-    + only changes recorded rather than full copy of new file.
-    + enables reverting to a previous version
 
 - #### More than a simple source code hosting service. 
     + Provides a dynamic and collaborative social coding platform  
@@ -118,28 +63,21 @@ class: inverse, center, middle
 </center>
 
 
-<br>
-<br>
 
 ---
-class: inverse, center, middle
 
-# Next Gen Science
+# Modern scientific workflows
 
-***
----
 
-## modern science workflows
 
 ***can be overwhelming***
 
-<img src="images/workflows.png" width="500px" />
+<img src="../assets/workflows.png" width="500px" />
 
 <br>
 
 ---
 
-## **Next Generation Science demands**
 
 - #### **science increasingly computational**
 
@@ -152,25 +90,22 @@ class: inverse, center, middle
 <br>  
 
 ---
-## succesful modern science workflows
+
+## BUT: succesful modern science workflows
 
 ***can be extremely powerful***
 
-<img src="images/collab.png" width="500px" />
+<img src="../assets/collab.png" width="500px" />
 
 <br>
 <br>
 
 ---
-class: inverse, center, middle
 
-# **GitHub for science**
 
-***
----
-<br>
+# GitHub for science
 
-[![](images/git4sci.png)](http://scfbm.biomedcentral.com/articles/10.1186/1751-0473-8-7)
+[![](../assets/git4sci.png)](http://scfbm.biomedcentral.com/articles/10.1186/1751-0473-8-7)
 
 
 
@@ -183,31 +118,38 @@ class: inverse, center, middle
 <br>
 
 ---
+
 ## **Rstudio for r users**
 
 ![](https://status.github.com/images/invertocat.png)
 
 <br> 
 
-###           **♡**
+**♡**
 
-<img src="https://pbs.twimg.com/profile_images/487277095681150976/aEp2vlJy.png" width="200px" />
+<img src="../assets/r-rstudio.png" height="100px">
 
 <br>
 <br>
 
 ---
-class: inverse, center, middle
+
 
 # **GitHub features**
-***
+
+
+
+
+<img src="../assets/remotes.png" height="600px">>
+
+
 ---
 
-## repos
+## remote repositories
 
 centralising information e.g. [**weecology** / ***"Nine simple ways to make it easier to (re)use your data" paper***](http://ojs.library.queensu.ca/index.php/IEE/article/view/4608/0)
 
-[<img src="images/repo-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper)
+[<img src="../assets/repo-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper)
 
 <br>
 ---
@@ -215,7 +157,7 @@ centralising information e.g. [**weecology** / ***"Nine simple ways to make it e
 
 traceability
 
-[<img src="images/commits-1.png" width="500px"/>](https://github.com/ropensci/rfishbase/commits/master)
+[<img src="../assets/commits-1.png" width="500px"/>](https://github.com/ropensci/rfishbase/commits/master)
 
 <br>
 ---
@@ -224,7 +166,7 @@ traceability
 
 project management
 
-[<img src="images/issues-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/issues)
+[<img src="../assets/issues-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/issues)
 
 <br>
 ---
@@ -235,16 +177,16 @@ project management
 
 tracking contributors
 
-[<img src="images/track-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/graphs/contributors)
+[<img src="../assets/track-1.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/graphs/contributors)
 
 ---
 tracking commits
 
-[<img src="images/track-2.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/network)
+[<img src="../assets/track-2.png" width="500px"/>](https://github.com/weecology/data-sharing-paper/network)
 
 <br>
 ---
-class: inverse, center, middle
+
 
 # **entire process of project evolution reproducible**
 
@@ -252,7 +194,6 @@ class: inverse, center, middle
 <br>
 
 ---
-
 
 
 
@@ -272,39 +213,17 @@ class: inverse, center, middle
 
 ## **Example `GitHub` uses**
 
-[![](images/example_table.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945047/table/pcbi.1004947.t001/)
+[![](../assets/example_table.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945047/table/pcbi.1004947.t001/)
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945047/
 
-<br>
-<br>
 
----
-class: inverse, center, middle
 
-# **PRACTICALS**
 
-***
 
 ---
 
-<br>
-
-## **Practical 1: Github & Rstudio for version control**
-
-Practical adapted from Code Cafe Style tutorial by [Mike Croucher](http://www.walkingrandomly.com/) that will get you set up with all required software and able to link rstudio projects to github repos.
-
-### [**Enter Practical**](https://github.com/annakrystalli/ISBE_Symposium-1)
-
-<https://github.com/annakrystalli/ISBE_Symposium-1>
-
-<br>
-<br>
-<br>
-
----
-
-## **Practical 2: Github & Rstudio for collaborative coding**
+## **Practical: Github & Rstudio for collaborative coding**
 ### **#EvoLottery**
 
 **Beak and skull shapes in birds of prey (“raptors”) are strongly coupled and largely controlled by size.** 
@@ -315,24 +234,126 @@ Practical adapted from Code Cafe Style tutorial by [Mike Croucher](http://www.wa
 
   - We'll use **github** to **collate all species files** and **plot** them all up together at the end! We'll also **discover the skull and beak shapes** associated with each simulated species size.
 
-### [**Enter Practical**](https://nhm-stars.github.io/materials/day04/evolottery.html)
+### [**Enter Practical**](https://annakrystalli.me/evolottery.html)
 
-<https://nhm-stars.github.io/materials/day04/evolottery.html>
-
-<br>
-<br>
-<br>
+<https://annakrystalli.me/evolottery.html>
 
 ---
-class: inverse, center, middle
+
+## RECAP Forking
+
+<img src="../assets/clone.png" height="600px">
+
+
+
+---
+
+# Back to our project.
+
+We've initiated our project as a github repository but not connected it to remote repository on **GitHub**
+
+In the **Evolottery** exercise we used a method of linking to a repository by **cloning** one that **already exists on GitHub**. Now we want to do the opposite.
+
+```{r, eval=FALSE}
+usethis::use_github()
+```
+
+
+*if for some reason it creates the repository on GitHub but doesn't push the contents, try running* `git push origin master` *in the terminal/shell*
+
+---
+
+There are **two very important documents misising in our repository** 
+
+1. A README
+2. A License
+
+Let's go create an issue in our repository about this.
+
+
+---
+
+#### README
+
+READMEs are the landing page of any repository on GitHub. 
+
+
+
+```{r, eval=FALSE}
+usethis::use_readme_md()
+```
+Creates a simple **`md`** README
+
+
+```{r, eval=FALSE}
+usethis::use_readme_rmd()
+```
+Creates an **`Rmd`** README in which you can run R examples and automatically creates the `README.md`.
+- Render each time you make changes to `README.Rmd` so `README.md` is updated.
+
+
+---
+
+### License
+
+```{r, eval=FALSE}
+usethis::use_mit_license("Anna Krystalli")
+```
+
+
+```{r, echo=FALSE}
+magick::image_read("../assets/LICENSE.png") %>% image_resize("200x700")
+```
+
+
+```{r, echo=FALSE}
+magick::image_read("../assets/LICENSEmd.png") %>% image_resize("400x700")
+
+```
+
+---
+
+### Referencing an issue in a commit message
+
+#### You can **reference a specific issue using `#`** in a commit message to link it to that specific issue. 
+
+eg `add README & LICENSE. Fix #1`
+
+<br>
+
+- **Commit all these files** that you just created, **referencing issue 1 (`#1`) in your commit message**.
+
+- **Push** to GitHub
+
+- Check out the issue to se what happened.
+
+(N.B if you use the phrase **resolve #1**, GitHub will also close the issue `r emo::ji("+1")`)
+
+---
+
+## Publishing html to GitHub.
+
+- If you haven't already published the rendered (.`html`) version of your report do so now.
+
+- Head to GitHub and look for the **Settings** `r emo::ji("gear")`
+
+- Scroll down to the **GitHub Pages** Section and set the **Source** to **`master branch`**.
+
+<img src="../assets/gh-pages.png" height="250px">
+
+---
+
+Your repo is now hosting any html documents at the address given! 
+
+The URL will be the URL given followed by the name of the file:
+
+
+<http://annakrystalli.me/gapminderRR/gapminder-analysis.html>
+
+---
 
 # Recap
 
-***
-
----
-
-<br>
 
 ## GitHub amazing for:
 
@@ -345,38 +366,17 @@ class: inverse, center, middle
 ---
 
 ## GitHub tips
-***
+
 
 - Use [README](https://github.com/matiassingers/awesome-readme) to provide an overview of your project
-- commit early, commit often
-- write meaninful messages
 - use issues to keep track of bugs, tasks, and enhancements
 - include a [LICENSE](https://github.com/blog/1530-choosing-an-open-source-license)
 - practice by collaborating with yourself on different machines!
 - [handy github glossary](https://help.github.com/enterprise/11.10.340/user/articles/github-glossary/)
 
-<br>
-<br>
 
----
 
-## Visual Recap
 
-<img src="images/github_wkf.jpg" width="500px"/>
-
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4945047/>
-
-<br>
-
----
-
-# Further resources
-
-[Getting started with GitHub](http://jennybc.github.io/2014-05-12-ubc/ubc-r/session2.4_github.html) from materials for a [software carpentry course at UBC](http://jennybc.github.io/2014-05-12-ubc/)
-
-[Slides for lecture](http://kbroman.org/Tools4RR/assets/lectures/04_git_withnotes.pdf)  Karl Broman gave on git/github, with notes
-
-[joeyklee's friendly github intro](https://github.com/joeyklee/friendly-github-intro). *Mozilla Science Lab* workshop
 
 
 

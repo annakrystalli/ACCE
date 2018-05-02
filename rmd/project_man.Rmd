@@ -321,7 +321,7 @@ gapmider_rel_pop <- function(gapminder_df, base_year = 1952) {
     # group by country and calculate population relative to baseline year
     gapminder_df %>%
         dplyr::filter(year >= base_year) %>% 
-        dplyr::group_by(country) %>% dplyr::do(rel_pop_get(.)) %>%
+        dplyr::group_by(country) %>% dplyr::do(rel_pop_get(.), base_year) %>%
         dplyr::ungroup()
 }
 ```
@@ -378,7 +378,7 @@ gapmider_rel_pop <- function(gapminder_df, base_year = 1952) {
     # group by country and calculate population relative to baseline year
     gapminder_df %>%
         dplyr::filter(year >= base_year) %>% 
-        dplyr::group_by(country) %>% dplyr::do(rel_pop_get(.)) %>%
+        dplyr::group_by(country) %>% dplyr::do(rel_pop_get(.), base_year) %>%
         dplyr::ungroup()
 }
 ```
@@ -392,7 +392,7 @@ I'm not exporting this function so full documentation is not necessary
 ```{r}
 # calculate population relative to a baseline year from gapminder single country 
 # subset
-rel_pop_get <- function(df) {
+rel_pop_get <- function(df, base_year) {
     df$pop_rel <- df$pop/df$pop[df$year == base_year]
     df
 }
@@ -413,6 +413,32 @@ rel_pop_get <- function(df) {
 (Hint a relative population of 1, represents 0% change) 
     
 - Document it appropriately so that it is exported.
+
+---
+
+## solution
+
+```{r, eval=FALSE}
+#' Calculate population percentage change from baseline
+#'
+#' Calculate population percentage change from baseline from relative population
+#' @param gapminder_df dataframe of gapminder data. Must contain pop_rel column.
+#'
+#' @return gapminder_df with population percentage change from baseline appended 
+#' as column pop_perc
+#' @export
+#' 
+pop_perc_get <- function(gapminder_df){
+    gapminder_df$pop_perc <- (gapminder_df$pop_rel - 1) * 100
+    gapminder_df
+}
+```
+
+
+
+
+
+
 
 ---
 

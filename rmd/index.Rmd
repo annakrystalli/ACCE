@@ -47,13 +47,13 @@ Understand why this all matters!
 
 ### Wed May 2nd
 
-- [Literate Programming]()
+- [Literate Programming](http://annakrystalli.me/ACCE/literate-prog.html)
 
-- [Version Control through Git]()
+- [Version Control through Git](http://annakrystalli.me/ACCE/git.html)
 
-- [Collaborative through GitHub]()
+- [Collaborative through GitHub](http://annakrystalli.me/ACCE/collab_gh_intro.html)
 
-- [Bringing it all together]()
+- [Bringing it all together](http://annakrystalli.me/ACCE/outro.html)
 
 
 
