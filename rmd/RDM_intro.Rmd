@@ -3,11 +3,6 @@ title: "Basic Data Hygiene"
 author: "ACCE Research Data and Project Management"
 date: "01-02 May 2018, TUoS"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: flatly
-    highlight: textmate
   xaringan::moon_reader:
     css: ["default", "../assets/css/little_ak.css", "../assets/css/little_ak-fonts.css"]
     lib_dir: libs
@@ -16,6 +11,11 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: textmate
 ---
 
 

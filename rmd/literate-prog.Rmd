@@ -45,7 +45,10 @@ magick_webshot <- function(...){
 
 ---
 
-### **Materials on [GitHub](https://github.com/annakrystalli/literate-programming/tree/master)**
+
+### **Course Website:** <http://annakrystalli.me/ACCE/>
+
+### **Latecomers: Download yesterdays materials from [GitHub](https://github.com/annakrystalli/ACCElatecomers)**
 
 #### [@annakrystalli](https://twitter.com/annakrystalli) | a.krystalli\[at]sheffield.ac.uk
 
@@ -1341,3 +1344,11 @@ magick_webshot(url = "https://awesome-blogdown.com/",
 
 - [Producing html documents from `.R` scripts using `knitr::spin`](http://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/)
 
+---
+
+## Solutions: My example
+
+- [`gapminder-analysis` Rendered html](http://annakrystalli.me/gapminderRR/gapminder-analysis.html)
+
+
+- [`gapminder-analysis` Rmd](https://github.com/annakrystalli/gapminderRR/blob/master/gapminder-analysis.Rmd)

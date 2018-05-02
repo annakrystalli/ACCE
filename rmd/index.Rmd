@@ -11,6 +11,10 @@ output:
 ---
 
 
+#### [@annakrystalli](https://twitter.com/annakrystalli) | a.krystalli\[at]sheffield.ac.uk
+
+***
+
 ## Description
 
 In order to ensure robustness of outputs and maximise the benefits of ACCE research to future researchers and society more generally, it is important to share the underlying code and data. But for sharing to have any impact, such materials need to be created FAIR (findable, accessible, interoperable, reusable), i.e. they must be adequately described, archived, and made discoverable to an appropriate standard. Additionally, if analyses are to be deemed robust, they must be at the very least reproducible but ideally well documented and reviewable. Such skills are increasingly becoming recognised as standard for modern open, reproducible and collaborative computational research. Fortunately, in recent years, they have been made increasingly accessible through advanced digital tools.
@@ -51,10 +55,10 @@ Understand why this all matters!
 
 - [Version Control through Git](http://annakrystalli.me/ACCE/git.html)
 
-- [Collaborative through GitHub](http://annakrystalli.me/ACCE/collab_gh_intro.html)
+- [Collaboration through GitHub](http://annakrystalli.me/ACCE/collab_gh_intro.html)
+    + [Evolottery!](http://annakrystalli.me/ACCE/evolottery.html)
 
 - [Bringing it all together](http://annakrystalli.me/ACCE/outro.html)
-
 
 
 

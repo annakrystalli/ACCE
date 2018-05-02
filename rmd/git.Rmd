@@ -322,16 +322,12 @@ You can use `regex` in `.gitignore` files to ignore files according to a pattern
 
 ## Further Resources
 
-- [Git-it]()
-- [Happy with Git]()
+- [Git-it](http://jlord.us/git-it/)
+- [Happy with Git](http://happygitwithr.com/)
 - [Oh Shit Git](http://ohshitgit.com/)
 
 
 ---
-
-
-
-
 
 ## Never forget
 
