@@ -414,17 +414,32 @@ div.tocify {
 <h1>Back to our project.</h1>
 <p>We’ve initiated our project as a github repository but not connected it to remote repository on <strong>GitHub</strong></p>
 <p>In the <strong>Evolottery</strong> exercise we used a method of linking to a repository by <strong>cloning</strong> one that <strong>already exists on GitHub</strong>. Now we want to do the opposite.</p>
-<pre class="r"><code>usethis::use_github()</code></pre>
+<pre class="r"><code>usethis::use_github(protocol = &quot;https&quot;)</code></pre>
+<p>(Works with GITHUB_PAT)</p>
 <p><em>if for some reason it creates the repository on GitHub but doesn’t push the contents, try running</em> <code>git push origin master</code> <em>in the terminal/shell</em></p>
-<p><a href="https://help.github.com/enterprise/2.13/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Set up an ssh key</a></p>
 <hr />
-<p>There are <strong>two very important documents misising in our repository</strong></p>
+<div id="authentication-problems" class="section level4">
+<h4>Authentication problems</h4>
+<p>If you create the github reporsitory with <strong>ssh</strong> authentication (<code>use_github()</code> default), you can:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://help.github.com/enterprise/2.13/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Set up an ssh key</a></li>
+<li><p>Change to <em>https</em> authentication :</p>
+<pre><code>git remote set-url origin https://github.com/USERNAME/REPOSITORY.git</code></pre></li>
+</ol>
+<p>Check what authentication you are using by running this in the terminal</p>
+<pre><code>git remote -v</code></pre>
+<p><em>https</em>: <code>origin https://github.com/USERNAME/REPOSITORY.git (fetch)</code></p>
+<p><em>ssh</em>: <code>origin  git@github.com:USERNAME/REPOSITORY.git (push)</code></p>
+<p>More details <a href="https://help.github.com/articles/changing-a-remote-s-url/">here</a></p>
+<hr />
+<p>There are <strong>two very important documents missing in our repository</strong></p>
 <ol style="list-style-type: decimal">
 <li>A README</li>
 <li>A License</li>
 </ol>
 <p>Let’s go create an issue in our repository about this.</p>
 <hr />
+</div>
 <div id="readme" class="section level4">
 <h4>README</h4>
 <p>READMEs are the landing page of any repository on GitHub.</p>
